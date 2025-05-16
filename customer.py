@@ -13,3 +13,16 @@ class Customer:
 
         else:
             print("Name must be between 1 and 15 characters long.")
+
+    def orders(self):
+        from order import Order
+        return [order for order in Order.all_orders if order.customer == self]
+
+    def coffee(self):
+        return list(set(order.coffee for order in self.orders()))
+        
+
+    def create_order(self, coffee, price):
+        from order import Order
+
+        return Order(self, coffee, price)

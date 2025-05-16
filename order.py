@@ -1,4 +1,7 @@
 class Order:
+
+    all_orders = []
+
     def __init__(self, customer, coffee, price):
         self.customer = customer
         self.coffee = coffee
@@ -40,5 +43,6 @@ class Order:
             self._price = value
         else:
             raise ValueError("Price must be a float between 1 and 10.")
+
 
 
