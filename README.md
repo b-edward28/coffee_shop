@@ -33,7 +33,7 @@ coffee_shop/
 Create three Python files in your project directory and in each file, define a class corresponding to the file name:
  - customer.py
  - coffee.py
- -  order.py
+ - order.py
 
 #### Customer
 - It has attribute - name with a string between 1 and 15 characters.
