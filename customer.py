@@ -4,7 +4,7 @@ class Customer:
 
     @property
     def name(self):
-        return self.name
+        return self._name
 
     @name.setter
     def name(self, value):
@@ -24,13 +24,11 @@ class Customer:
 
     def create_order(self, coffee, price):
         from order import Order
-
         return Order(self, coffee, price)
 
     @classmethod
     def most_aficionado(cls,coffee):
         from order import Order
-
         customer_totals = {}
 
         for order in Order.all_orders:
