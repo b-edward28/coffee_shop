@@ -10,8 +10,8 @@ The goal is to demonstrate understanding of OOP concepts such as encapsulation, 
 - cd coffee_shop
 
 ### 2. To set up virtual environment run the codes below
-     * pipenv install
-     * pipenv shell
+      pipenv install
+      pipenv shell
 
 ### 3. Install pytest
 pipenv install pytest
@@ -23,9 +23,9 @@ coffee_shop/
  - order.py
  - debug.py
  - tests/
-     - test_customer.py
-     - test_coffee.py
-     - test_order.py
+      test_customer.py
+      test_coffee.py
+      test_order.py
  - README.md
 
 ## Domain Model
