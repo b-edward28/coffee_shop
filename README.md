@@ -23,9 +23,9 @@ coffee_shop/
  - order.py
  - debug.py
  - tests/
-         test_customer.py
-         test_coffee.py
-         test_order.py
+    - test_customer.py
+    - test_coffee.py
+    - test_order.py
  - README.md
 
 ## Domain Model
