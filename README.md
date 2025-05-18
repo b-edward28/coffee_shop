@@ -10,31 +10,30 @@ The goal is to demonstrate understanding of OOP concepts such as encapsulation, 
 - cd coffee_shop
 
 ### 2. To set up virtual environment run the codes below
-- pipenv install
-- pipenv shell
+     * pipenv install
+     * pipenv shell
 
 ### 3. Install pytest
 pipenv install pytest
 
 ## File Structure
 coffee_shop/
-├── customer.py
-├── coffee.py
-├── order.py
-├── debug.py
-├── tests/
-│   ├── test_customer.py
-│   ├── test_coffee.py
-│   └── test_order.py
-└── README.md
+ - customer.py
+ - coffee.py
+ - order.py
+ - debug.py
+ - tests/
+     - test_customer.py
+     - test_coffee.py
+     - test_order.py
+ - README.md
 
 ## Domain Model
 ### Create Classes
 Create three Python files in your project directory and in each file, define a class corresponding to the file name:
-
-     *customer.py
-     * coffee.py
-     * order.py
+ - customer.py
+ - coffee.py
+ -  order.py
 
 #### Customer
 - It has attribute - name with a string between 1 and 15 characters.
