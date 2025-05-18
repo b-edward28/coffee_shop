@@ -16,19 +16,36 @@ The goal is to demonstrate understanding of OOP concepts such as encapsulation, 
 ### 3. Install pytest
 pipenv install pytest
 
+## File Structure
+coffee_shop/
+├── customer.py
+├── coffee.py
+├── order.py
+├── debug.py
+├── tests/
+│   ├── test_customer.py
+│   ├── test_coffee.py
+│   └── test_order.py
+└── README.md
+
 ## Domain Model
-### Classes
+### Create Classes
+Create three Python files in your project directory and in each file, define a class corresponding to the file name:
+
+     *customer.py
+     * coffee.py
+     * order.py
 
 #### Customer
-- It has attribute - name 
+- It has attribute - name with a string between 1 and 15 characters.
 - Methods include; orders(), coffee(), create_order(), most_aficionado(coffee)
 
 #### Coffee
-- It has the attribute - name
+- It has the attribute - name with a string, at least 3 characters long.
 - Methods include: orders(), customers(), num_orders(), average_price()
 
 #### Order
-It has the attribute - customer, coffee, price
+It has Customer instance, a Coffee instance, and a price (float between 1.0 and 10.0)
 
 ### Relationships
 - A customer can have many orders
@@ -44,8 +61,10 @@ It has the attribute - customer, coffee, price
 5. Data validation
 
 ### Running test
-Making sure you are in the virtual environment run "pytest"
+* Create a tests directory in your project directory.
+* Add test files (test_customer.py, test_coffee.py, test_order.py) to test each class and method.
+* Write test cases to validate that each method and property works correctly.
+* Making sure you are in the virtual environment run "pytest"
 
-
-
-
+### Debugging
+Create a debug.py file to test your code interactively.
