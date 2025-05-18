@@ -8,11 +8,11 @@ class Customer:
 
     @name.setter
     def name(self, value):
-        if isinstance(value, str) and 1 <= len(value) <= 15:
-            self._name = value
-
-        else:
-            print("Name must be between 1 and 15 characters long.")
+        if not isinstance(value, str):
+            raise TypeError("Name must be a string.")
+        if not (1 <= len(value) <= 15):
+            raise ValueError("Name must be between 1 and 15 characters long.")
+        self._name = value
 
     def orders(self):
         from order import Order

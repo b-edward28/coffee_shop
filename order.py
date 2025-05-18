@@ -6,6 +6,7 @@ class Order:
         self.customer = customer
         self.coffee = coffee
         self.price = price
+        Order.all_orders.append(self)
 
     @property
     def customer(self):

@@ -8,10 +8,11 @@ class Coffee:
 
     @name.setter
     def name(self, value):
-        if isinstance(value, str) and len(value) >= 3:
-            self._name = value
-        else:
-            print("Name must be at least 3 characters long.")
+        if not isinstance(value, str):
+            raise TypeError("Name must be a string.")
+        if len(value) < 3:
+            raise ValueError("Name must be at least 3 characters long.")
+        self._name = value
 
     def orders(self):
         from order import Order

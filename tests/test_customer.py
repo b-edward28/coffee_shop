@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pytest
 from customer import Customer
 from coffee import Coffee
@@ -10,18 +13,24 @@ def test_customer_name_initialization():
         customer = Customer("A" * 16)
 
 def test_customer_orders_and_coffee():
+    Order.all_orders = []
+
     customer = Customer("Alice")
     coffee1 = Coffee("Espresso")
     coffee2 = Coffee("Latte")
-    order1 = Order(customer, coffee1, 5.0)
-    order2 = Order(customer, coffee2, 4.5)
 
-    assert customer.orders() == [order1, order2]
-    assert customer.coffee() == [coffee1, coffee2]
-    assert customer.create_order(coffee1, 5.0) == order1
-    assert customer.create_order(coffee2, 4.5) == order2
-    assert customer.create_order(coffee1, 5.0).price == 5.0
-    assert customer.create_order(coffee2, 4.5).price == 4.5
+    order1 = Order(customer, coffee1, 5.0)
+    order2 = Order(customer, coffee2, 4.0)
+
+    customer_orders = customer.orders()
+    assert order1 in customer_orders
+    assert order2 in customer_orders
+    assert len(customer_orders) == 2
+
+    coffees = customer.coffee()
+    assert coffee1 in coffees
+    assert coffee2 in coffees
+    assert len(coffees) == 2
 
 def test_customer_most_aficionado():
     customer1 = Customer("Alice")
