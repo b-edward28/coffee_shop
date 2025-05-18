@@ -6,12 +6,12 @@ The goal is to demonstrate understanding of OOP concepts such as encapsulation, 
 
 ## Installation
 ### 1. Clone this repository
-git clone this repo
-cd coffee_shop
+- git clone this repo
+- cd coffee_shop
 
 ### 2. To set up virtual environment run the codes below
-pipenv install
-pipenv shell
+- pipenv install
+- pipenv shell
 
 ### 3. Install pytest
 pipenv install pytest
@@ -20,12 +20,12 @@ pipenv install pytest
 ### Classes
 
 #### Customer
-It has attribute name 
-Methods include; orders(), coffee(), create_order(), most_aficionado(coffee)
+- It has attribute name 
+- Methods include; orders(), coffee(), create_order(), most_aficionado(coffee)
 
 #### Coffee
-It has the attribute name
-Methods include: orders(), customers(), num_orders(), average_price()
+- It has the attribute name
+- Methods include: orders(), customers(), num_orders(), average_price()
 
 #### Order
 It has the attribute customer, coffee, price
@@ -39,7 +39,7 @@ It has the attribute customer, coffee, price
 ### Features
 1. Encapsulation - using setter methods
 2. Association - A Customer is associated with multiple orders.
-                 A Coffee is associated with multiple orders.
+               - A Coffee is associated with multiple orders.
 3. Dependency - In Customer.create_order(coffee, price)
 4. Unit testing using pytest
 5. Data validation
